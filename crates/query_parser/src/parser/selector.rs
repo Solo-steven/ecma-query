@@ -3,7 +3,6 @@ use crate::ast::*;
 use crate::token::TokenKind;
 use super::{Parser, ParseResult };
 
-
 impl <'a> Parser<'a> {
    pub (super) fn parse_selector(&mut self) -> ParseResult<Selector<'a>> {
         self.expect_token(TokenKind::ParenthesesLeftPunctuator)?;

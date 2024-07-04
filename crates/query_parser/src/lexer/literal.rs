@@ -28,10 +28,13 @@ impl <'a> Lexer<'a> {
         self.eat_char();
         loop {
             match self.get_char() {
-                None => panic!(),
+                None => {
+                    panic!()
+                },
                 Some(ch) => {
                     if ch == end_char {
                         self.finish_token_with_eat(TokenKind::StringLiteral);
+                        break;
                     }
                     self.eat_char();
                     continue;

@@ -1,8 +1,14 @@
 use query_parser::{lexer::Lexer, parser::Parser, token::TokenKind};
 
 fn main() {
+    let code_2 = "
+    (let openElement = GetOpenElement)
+    
+
+    ";
     let code = "
     (query 
+        (name, 'GetOpenElement')
         (node 
             (type 'JSXOpenElement')
             (attributes array (node 

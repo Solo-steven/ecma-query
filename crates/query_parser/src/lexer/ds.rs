@@ -1,3 +1,4 @@
+/// ! Data structure for Lexer
 use std::str::CharIndices;
 use crate::token::TokenKind;
 use crate::span::Span;

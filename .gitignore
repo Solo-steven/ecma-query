@@ -1,2 +1,7 @@
+# Rust Cache
 /target
+# Mac Env
 **/.DS_Store
+# Test file for dev
+**/test.json
+**/test.js
