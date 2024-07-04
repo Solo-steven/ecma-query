@@ -105,13 +105,9 @@ impl<'a> Parser<'a> {
         inst
     }
     fn parse_query_optional_name(&mut self) -> ParseResult<Option<Cow<'a, str>>> {
-        println!("BEFROE {}", self.lexer.cur_value());
         if self.match_lookahead_context_keyword("name", 1) {
-            println!("After {}", self.lexer.cur_value());
             self.expect_token(TokenKind::ParenthesesLeftPunctuator)?;
-            println!("{:?} {:?}", self.get_token(), self.lexer.cur_value());
             self.next_token(); // eat name id
-            println!("{:?}", self.get_token());
             let name = self.expect_token_with_value(TokenKind::Identifier)?;
             self.expect_token(TokenKind::ParenthesesRightPunctuator)?;
             Ok(Some(name))
