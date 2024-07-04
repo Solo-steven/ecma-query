@@ -1,14 +1,9 @@
 use query_parser::{lexer::Lexer, parser::Parser, token::TokenKind};
 
 fn main() {
-    let code_2 = "
-    (let openElement = GetOpenElement)
-    
-
-    ";
     let code = "
     (query 
-        (name, 'GetOpenElement')
+        (name GetOpenElement)
         (node 
             (type 'JSXOpenElement')
             (attributes array (node 
@@ -25,7 +20,7 @@ fn main() {
         match lexer.get_token() {
             TokenKind::EOFToken => break,
             _ => {
-                println!("{:?}", lexer.get_token())
+                println!("{:?} {:?}", lexer.get_token(), lexer.cur_value())
             }
         }
         lexer.next_token();
@@ -34,4 +29,3 @@ fn main() {
 
     println!("{:?}", parser.parse());
 }
-

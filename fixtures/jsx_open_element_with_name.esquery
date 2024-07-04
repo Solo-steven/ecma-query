@@ -1,0 +1,13 @@
+(query 
+    (name GetOpenElement)
+    (node 
+        (type 'JSXOpenElement')
+        (attributes array (node 
+            (type 'JSXAttribute')
+            (name (node 
+                (type 'JSXIdentifier')
+                (name 'className')
+            ))
+        ))
+    )
+)

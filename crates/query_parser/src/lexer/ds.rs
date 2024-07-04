@@ -1,17 +1,23 @@
+use crate::span::Span;
+use crate::token::TokenKind;
 /// ! Data structure for Lexer
 use std::str::CharIndices;
-use crate::token::TokenKind;
-use crate::span::Span;
+
 pub struct LexerCursor<'a> {
-    pub (super) cur_char: Option<char>,
-    pub (super) source: &'a str,
-    pub (super) iter: CharIndices<'a>,
-    pub (super) offset: usize,
-    pub (super) cur_line: usize,
-    pub (super) cur_line_start: usize,
+    pub(super) cur_char: Option<char>,
+    pub(super) source: &'a str,
+    pub(super) iter: CharIndices<'a>,
+    pub(super) offset: usize,
+    pub(super) cur_line: usize,
+    pub(super) cur_line_start: usize,
 }
-impl <'a> LexerCursor<'a> {
-    pub fn new(source: &'a str, cur_char: Option<char>, iter: CharIndices<'a>, offset: usize ) -> Self {
+impl<'a> LexerCursor<'a> {
+    pub fn new(
+        source: &'a str,
+        cur_char: Option<char>,
+        iter: CharIndices<'a>,
+        offset: usize,
+    ) -> Self {
         Self {
             cur_char,
             source,
@@ -22,10 +28,11 @@ impl <'a> LexerCursor<'a> {
         }
     }
 }
+#[derive(Debug, Clone, PartialEq)]
 pub struct LexerCahce {
-    pub (super) token: TokenKind,
-    pub (super) start_span: Span,
-    pub (super) finish_span: Span,
+    pub token: TokenKind,
+    pub start_span: Span,
+    pub finish_span: Span,
 }
 impl LexerCahce {
     pub fn new(token: TokenKind) -> Self {

@@ -1,0 +1,509 @@
+[
+  {
+    "token": "ParenthesesLeftPunctuator",
+    "start_span": {
+      "offset": 0,
+      "line": 0,
+      "col": 0
+    },
+    "finish_span": {
+      "offset": 1,
+      "line": 0,
+      "col": 1
+    }
+  },
+  {
+    "token": "Identifier",
+    "start_span": {
+      "offset": 1,
+      "line": 0,
+      "col": 1
+    },
+    "finish_span": {
+      "offset": 6,
+      "line": 0,
+      "col": 6
+    }
+  },
+  {
+    "token": "ParenthesesLeftPunctuator",
+    "start_span": {
+      "offset": 12,
+      "line": 1,
+      "col": 4
+    },
+    "finish_span": {
+      "offset": 13,
+      "line": 1,
+      "col": 5
+    }
+  },
+  {
+    "token": "Identifier",
+    "start_span": {
+      "offset": 13,
+      "line": 1,
+      "col": 5
+    },
+    "finish_span": {
+      "offset": 17,
+      "line": 1,
+      "col": 9
+    }
+  },
+  {
+    "token": "Identifier",
+    "start_span": {
+      "offset": 18,
+      "line": 1,
+      "col": 10
+    },
+    "finish_span": {
+      "offset": 32,
+      "line": 1,
+      "col": 24
+    }
+  },
+  {
+    "token": "ParenthesesRightPunctuator",
+    "start_span": {
+      "offset": 32,
+      "line": 1,
+      "col": 24
+    },
+    "finish_span": {
+      "offset": 33,
+      "line": 1,
+      "col": 25
+    }
+  },
+  {
+    "token": "ParenthesesLeftPunctuator",
+    "start_span": {
+      "offset": 38,
+      "line": 2,
+      "col": 4
+    },
+    "finish_span": {
+      "offset": 39,
+      "line": 2,
+      "col": 5
+    }
+  },
+  {
+    "token": "Identifier",
+    "start_span": {
+      "offset": 39,
+      "line": 2,
+      "col": 5
+    },
+    "finish_span": {
+      "offset": 43,
+      "line": 2,
+      "col": 9
+    }
+  },
+  {
+    "token": "ParenthesesLeftPunctuator",
+    "start_span": {
+      "offset": 53,
+      "line": 3,
+      "col": 8
+    },
+    "finish_span": {
+      "offset": 54,
+      "line": 3,
+      "col": 9
+    }
+  },
+  {
+    "token": "Identifier",
+    "start_span": {
+      "offset": 54,
+      "line": 3,
+      "col": 9
+    },
+    "finish_span": {
+      "offset": 58,
+      "line": 3,
+      "col": 13
+    }
+  },
+  {
+    "token": "StringLiteral",
+    "start_span": {
+      "offset": 59,
+      "line": 3,
+      "col": 14
+    },
+    "finish_span": {
+      "offset": 75,
+      "line": 3,
+      "col": 30
+    }
+  },
+  {
+    "token": "ParenthesesRightPunctuator",
+    "start_span": {
+      "offset": 75,
+      "line": 3,
+      "col": 30
+    },
+    "finish_span": {
+      "offset": 76,
+      "line": 3,
+      "col": 31
+    }
+  },
+  {
+    "token": "ParenthesesLeftPunctuator",
+    "start_span": {
+      "offset": 85,
+      "line": 4,
+      "col": 8
+    },
+    "finish_span": {
+      "offset": 86,
+      "line": 4,
+      "col": 9
+    }
+  },
+  {
+    "token": "Identifier",
+    "start_span": {
+      "offset": 86,
+      "line": 4,
+      "col": 9
+    },
+    "finish_span": {
+      "offset": 96,
+      "line": 4,
+      "col": 19
+    }
+  },
+  {
+    "token": "Identifier",
+    "start_span": {
+      "offset": 97,
+      "line": 4,
+      "col": 20
+    },
+    "finish_span": {
+      "offset": 102,
+      "line": 4,
+      "col": 25
+    }
+  },
+  {
+    "token": "ParenthesesLeftPunctuator",
+    "start_span": {
+      "offset": 103,
+      "line": 4,
+      "col": 26
+    },
+    "finish_span": {
+      "offset": 104,
+      "line": 4,
+      "col": 27
+    }
+  },
+  {
+    "token": "Identifier",
+    "start_span": {
+      "offset": 104,
+      "line": 4,
+      "col": 27
+    },
+    "finish_span": {
+      "offset": 108,
+      "line": 4,
+      "col": 31
+    }
+  },
+  {
+    "token": "ParenthesesLeftPunctuator",
+    "start_span": {
+      "offset": 122,
+      "line": 5,
+      "col": 12
+    },
+    "finish_span": {
+      "offset": 123,
+      "line": 5,
+      "col": 13
+    }
+  },
+  {
+    "token": "Identifier",
+    "start_span": {
+      "offset": 123,
+      "line": 5,
+      "col": 13
+    },
+    "finish_span": {
+      "offset": 127,
+      "line": 5,
+      "col": 17
+    }
+  },
+  {
+    "token": "StringLiteral",
+    "start_span": {
+      "offset": 128,
+      "line": 5,
+      "col": 18
+    },
+    "finish_span": {
+      "offset": 142,
+      "line": 5,
+      "col": 32
+    }
+  },
+  {
+    "token": "ParenthesesRightPunctuator",
+    "start_span": {
+      "offset": 142,
+      "line": 5,
+      "col": 32
+    },
+    "finish_span": {
+      "offset": 143,
+      "line": 5,
+      "col": 33
+    }
+  },
+  {
+    "token": "ParenthesesLeftPunctuator",
+    "start_span": {
+      "offset": 156,
+      "line": 6,
+      "col": 12
+    },
+    "finish_span": {
+      "offset": 157,
+      "line": 6,
+      "col": 13
+    }
+  },
+  {
+    "token": "Identifier",
+    "start_span": {
+      "offset": 157,
+      "line": 6,
+      "col": 13
+    },
+    "finish_span": {
+      "offset": 161,
+      "line": 6,
+      "col": 17
+    }
+  },
+  {
+    "token": "ParenthesesLeftPunctuator",
+    "start_span": {
+      "offset": 162,
+      "line": 6,
+      "col": 18
+    },
+    "finish_span": {
+      "offset": 163,
+      "line": 6,
+      "col": 19
+    }
+  },
+  {
+    "token": "Identifier",
+    "start_span": {
+      "offset": 163,
+      "line": 6,
+      "col": 19
+    },
+    "finish_span": {
+      "offset": 167,
+      "line": 6,
+      "col": 23
+    }
+  },
+  {
+    "token": "ParenthesesLeftPunctuator",
+    "start_span": {
+      "offset": 185,
+      "line": 7,
+      "col": 16
+    },
+    "finish_span": {
+      "offset": 186,
+      "line": 7,
+      "col": 17
+    }
+  },
+  {
+    "token": "Identifier",
+    "start_span": {
+      "offset": 186,
+      "line": 7,
+      "col": 17
+    },
+    "finish_span": {
+      "offset": 190,
+      "line": 7,
+      "col": 21
+    }
+  },
+  {
+    "token": "StringLiteral",
+    "start_span": {
+      "offset": 191,
+      "line": 7,
+      "col": 22
+    },
+    "finish_span": {
+      "offset": 206,
+      "line": 7,
+      "col": 37
+    }
+  },
+  {
+    "token": "ParenthesesRightPunctuator",
+    "start_span": {
+      "offset": 206,
+      "line": 7,
+      "col": 37
+    },
+    "finish_span": {
+      "offset": 207,
+      "line": 7,
+      "col": 38
+    }
+  },
+  {
+    "token": "ParenthesesLeftPunctuator",
+    "start_span": {
+      "offset": 224,
+      "line": 8,
+      "col": 16
+    },
+    "finish_span": {
+      "offset": 225,
+      "line": 8,
+      "col": 17
+    }
+  },
+  {
+    "token": "Identifier",
+    "start_span": {
+      "offset": 225,
+      "line": 8,
+      "col": 17
+    },
+    "finish_span": {
+      "offset": 229,
+      "line": 8,
+      "col": 21
+    }
+  },
+  {
+    "token": "StringLiteral",
+    "start_span": {
+      "offset": 230,
+      "line": 8,
+      "col": 22
+    },
+    "finish_span": {
+      "offset": 241,
+      "line": 8,
+      "col": 33
+    }
+  },
+  {
+    "token": "ParenthesesRightPunctuator",
+    "start_span": {
+      "offset": 241,
+      "line": 8,
+      "col": 33
+    },
+    "finish_span": {
+      "offset": 242,
+      "line": 8,
+      "col": 34
+    }
+  },
+  {
+    "token": "ParenthesesRightPunctuator",
+    "start_span": {
+      "offset": 255,
+      "line": 9,
+      "col": 12
+    },
+    "finish_span": {
+      "offset": 256,
+      "line": 9,
+      "col": 13
+    }
+  },
+  {
+    "token": "ParenthesesRightPunctuator",
+    "start_span": {
+      "offset": 256,
+      "line": 9,
+      "col": 13
+    },
+    "finish_span": {
+      "offset": 257,
+      "line": 9,
+      "col": 14
+    }
+  },
+  {
+    "token": "ParenthesesRightPunctuator",
+    "start_span": {
+      "offset": 266,
+      "line": 10,
+      "col": 8
+    },
+    "finish_span": {
+      "offset": 267,
+      "line": 10,
+      "col": 9
+    }
+  },
+  {
+    "token": "ParenthesesRightPunctuator",
+    "start_span": {
+      "offset": 267,
+      "line": 10,
+      "col": 9
+    },
+    "finish_span": {
+      "offset": 268,
+      "line": 10,
+      "col": 10
+    }
+  },
+  {
+    "token": "ParenthesesRightPunctuator",
+    "start_span": {
+      "offset": 273,
+      "line": 11,
+      "col": 4
+    },
+    "finish_span": {
+      "offset": 274,
+      "line": 11,
+      "col": 5
+    }
+  },
+  {
+    "token": "ParenthesesRightPunctuator",
+    "start_span": {
+      "offset": 275,
+      "line": 12,
+      "col": 0
+    },
+    "finish_span": {
+      "offset": 275,
+      "line": 12,
+      "col": 0
+    }
+  }
+]

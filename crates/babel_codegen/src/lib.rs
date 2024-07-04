@@ -1,13 +1,9 @@
-use query_parser::ast::RootNode;
 use crate::codegen::BabelCodegen;
-use std::fs::File;
-use std::io::Write;
+use query_parser::ast::RootNode;
 pub mod codegen;
 
-pub fn generate_babel_visitor(path: &str, ast: &RootNode) {
+pub fn generate_babel_visitor(ast: &RootNode) -> String {
     let mut codegen = BabelCodegen::new();
     let js_file_in_text = codegen.codegen(ast);
-
-    let mut file = File::create(path).unwrap();
-    write!(file, "{}", js_file_in_text).unwrap();
+    js_file_in_text
 }

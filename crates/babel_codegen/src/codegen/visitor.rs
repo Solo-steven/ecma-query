@@ -1,17 +1,18 @@
-
-use std::collections::{HashMap, HashSet};
-use query_parser::ast::{DescriptionNode, InstructionNode, Literal, LiteralOrNode, QueryActionNode, RootNode, Selector};
 use super::BabelCodegen;
+use query_parser::ast::{
+    DescriptionNode, InstructionNode, Literal, LiteralOrNode, QueryActionNode, RootNode, Selector,
+};
+use std::collections::{HashMap, HashSet};
 
 impl BabelCodegen {
-    pub (super) fn visit_root_node(&mut self, node: &RootNode) {
+    pub(super) fn visit_root_node(&mut self, node: &RootNode) {
         for inst in &node.instructions {
-            self.visit_inst_node(inst);    
+            self.visit_inst_node(inst);
         }
     }
     fn visit_inst_node(&mut self, node: &InstructionNode) {
         match node {
-            InstructionNode::Query(query_node) => self.visit_query_node(query_node)
+            InstructionNode::Query(query_node) => self.visit_query_node(query_node),
         }
     }
     fn visit_query_node(&mut self, query_node: &QueryActionNode) {
@@ -28,7 +29,7 @@ impl BabelCodegen {
             }
             if let Some(ast_type_str) = ast_type {
                 ast_type_str
-            }else {
+            } else {
                 panic!()
             }
         };
@@ -36,16 +37,16 @@ impl BabelCodegen {
 
         if let Some(set) = self.queried_ast_nodes.get_mut(&node_type) {
             set.insert(func_name);
-        }else {
+        } else {
             let mut set = HashSet::new();
             set.insert(func_name);
             self.queried_ast_nodes.insert(node_type, set);
         }
-
     }
     fn visit_node_description(&mut self, node: &DescriptionNode) -> String {
         let function_name = format!("testASTNode_{}", self.cache_functions.len());
-        self.cache_functions.insert(function_name.clone(), Default::default());
+        self.cache_functions
+            .insert(function_name.clone(), Default::default());
         let mut js_test_expression_map = HashMap::new();
         for selector in &node.selectors {
             match selector {
@@ -66,31 +67,44 @@ impl BabelCodegen {
                 }
                 Selector::Recursive(node) => {
                     let function_name = self.visit_node_description(&node.target_node);
-                    js_test_expression_map.insert(node.key.to_string(), format!("{}(node.{})", function_name, node.key));
+                    js_test_expression_map.insert(
+                        node.key.to_string(),
+                        format!("{}(node.{})", function_name, node.key),
+                    );
                 }
-                Selector::Array(selector) => {
-                    match &selector.value {
-                        LiteralOrNode::Node(node) =>  {
-                            let function_name = self.visit_node_description(&node);
-                            js_test_expression_map.insert(selector.key.to_string(), format!("Array.isArray(node.{}) && node.{}.some({})", selector.key, selector.key, function_name));
-                        }
-                        LiteralOrNode::Lit(literal) => {
-                            todo!()
-                        }
+                Selector::Array(selector) => match &selector.value {
+                    LiteralOrNode::Node(node) => {
+                        let function_name = self.visit_node_description(&node);
+                        js_test_expression_map.insert(
+                            selector.key.to_string(),
+                            format!(
+                                "Array.isArray(node.{}) && node.{}.some({})",
+                                selector.key, selector.key, function_name
+                            ),
+                        );
                     }
-                }
-                _ => todo!()
+                    LiteralOrNode::Lit(_) => {
+                        todo!()
+                    }
+                },
+                _ => todo!(),
             }
         }
         let mut check_all_condition = String::new();
         let mut index = 0;
         for (_key, expr) in &js_test_expression_map {
             let operator = if index != 0 { " && " } else { "" };
-            check_all_condition.push_str(format!("{}{}", operator,  expr).as_str());
+            check_all_condition.push_str(format!("{}{}", operator, expr).as_str());
             index += 1;
         }
         check_all_condition.push(';');
-        self.cache_functions.insert(function_name.clone(), format!("function {}(node) {{ return node && {}  }}", function_name, check_all_condition));
+        self.cache_functions.insert(
+            function_name.clone(),
+            format!(
+                "function {}(node) {{ return node && {}  }}",
+                function_name, check_all_condition
+            ),
+        );
         function_name
     }
 }

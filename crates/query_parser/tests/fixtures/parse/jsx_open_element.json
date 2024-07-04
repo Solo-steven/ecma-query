@@ -1,0 +1,64 @@
+{
+  "type": "RootNode",
+  "instructions": [
+    {
+      "type": "QueryCommand",
+      "name": null,
+      "target_node": {
+        "type": "DescriptionNode",
+        "selectors": [
+          {
+            "type": "LiteralSelector",
+            "key": "type",
+            "literal": {
+              "type": "StringLiteral",
+              "value": "'JSXOpenElement'"
+            }
+          },
+          {
+            "type": "ArraySelector",
+            "key": "attributes",
+            "value": {
+              "type": "DescriptionNode",
+              "selectors": [
+                {
+                  "type": "LiteralSelector",
+                  "key": "type",
+                  "literal": {
+                    "type": "StringLiteral",
+                    "value": "'JSXAttribute'"
+                  }
+                },
+                {
+                  "type": "RecursiveSelector",
+                  "key": "name",
+                  "target_node": {
+                    "type": "DescriptionNode",
+                    "selectors": [
+                      {
+                        "type": "LiteralSelector",
+                        "key": "type",
+                        "literal": {
+                          "type": "StringLiteral",
+                          "value": "'JSXIdentifier'"
+                        }
+                      },
+                      {
+                        "type": "LiteralSelector",
+                        "key": "name",
+                        "literal": {
+                          "type": "StringLiteral",
+                          "value": "'className'"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
